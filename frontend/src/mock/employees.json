@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Arun Kumar", "role": "Engineer", "level": 1, "xp": 30, "total_xp": 30 },
+  { "id": 2, "name": "Priya Sharma", "role": "Designer", "level": 1, "xp": 60, "total_xp": 60 },
+  { "id": 3, "name": "Rahul Gupta", "role": "Product", "level": 1, "xp": 10, "total_xp": 10 }
+]
