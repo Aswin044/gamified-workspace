@@ -33,7 +33,7 @@ async function start() {
 
     // Run the year simulation ONLY ONCE
     console.log("Starting 1-year simulation...");
-    await simulateYear();
+    //await simulateYear();
     console.log("Simulation completed!");
 
     app.listen(PORT, () => {
