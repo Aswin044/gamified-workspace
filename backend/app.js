@@ -19,5 +19,9 @@ app.get("/api/ping", (req, res) => res.json({ status: "ok" }));
 
 module.exports = app;
 const analyticsRoutes = require("./routes/analytics.routes");
-app.use("/api/analytics", analyticsRoutes);
+const cors = require("cors");
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "*"
+}));
+
 
