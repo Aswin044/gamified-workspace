@@ -5,14 +5,6 @@ Built with React + Vite, Node.js, Express, Sequelize, and PostgreSQL.
 
 Back-end runs on Render, front-end deployable via Render Static Site / Netlify / Vercel.
 
-🚀 Live Demo
-
-Backend API Health Check:
-https://<your-backend>.onrender.com/api/ping
-
-Frontend (if deployed):
-https://<your-frontend-url>
-
 📦 Tech Stack
 Frontend
 
