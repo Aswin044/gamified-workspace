@@ -27,10 +27,15 @@ async function start() {
       ]);
     }
 
-    // Run the year simulation ONLY ONCE
-    console.log("Starting 1-year simulation...");
-    await simulateYear();
-    console.log("Simulation completed!");
+    // IMPORTANT: Skip simulation during deployment
+    if (process.env.NODE_ENV !== "production" && process.env.RUN_SIMULATION === "true") {
+      console.log("Starting 1-year simulation...");
+      const simulateYear = require("./utils/simulateYear");
+      await simulateYear();
+      console.log("Simulation completed!");
+    } else {
+      console.log("Skipping simulation (production mode or RUN_SIMULATION not set)");
+    }
 
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
