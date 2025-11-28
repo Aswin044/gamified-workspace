@@ -27,7 +27,10 @@ async function start() {
       ]);
     }
 
-    console.log("Skipping yearly simulation for production startup.");
+    // Run the year simulation ONLY ONCE
+    console.log("Starting 1-year simulation...");
+    await simulateYear();
+    console.log("Simulation completed!");
 
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
